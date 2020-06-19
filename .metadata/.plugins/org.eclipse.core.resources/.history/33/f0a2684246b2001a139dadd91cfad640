@@ -1,0 +1,11 @@
+package view;
+
+@RestController
+public class ViewController {
+	
+	@GetMapping(execute/{query})
+	pulbic String executeQuery(query) {
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+package view;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+@RestController
+public class ViewController {
+	
+	@GetMapping(execute/{query})
+	pulbic Map executeQuery(query) {
+		try (Connection con = DriverManager.getConnection(url, user, passwd);
+	             
+	            ) {
+			
+		}
+			PreparedStatement ps = (PreparedStatement) con.createStatement();
+			ps = con.prepareStatement(query);
+           ResultSet rs =  ps.executeUpdate();
+           Map result = new HAshMap();
+           while(rs.next()) {
+        	   
+           }
+	}
+
+}
